@@ -1,2 +1,1 @@
-# gt-theme
-Gutenberg Times Theme based on 2025 
+# Gutenberg Times Theme based on 2025 
