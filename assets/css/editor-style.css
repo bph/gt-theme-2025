@@ -1,0 +1,55 @@
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
+
+/* Hide the vertical-header's site-title inside the editor too so it doesn't
+ * duplicate the identity strip's title. Front-end style.css hides it via
+ * the same selector, but the editor doesn't load style.css. */
+.gt-vertical-header__site-title {
+	display: none;
+}
+
+/*
+ * Reproduce the front-end vertical rail inside the editor.
+ * The front end grids `.wp-site-blocks`, but the editor renders templates in
+ * `.is-root-container` and never loads style.css — so the header stacked
+ * full-width. The `:has()` guard limits this to views that actually begin
+ * with a template part (template + design views), so the post-content editor
+ * (no template parts) is untouched.
+ */
+.is-root-container:has(> .wp-block-template-part:first-child) {
+	display: grid;
+	grid-template-columns: 96px 1fr;
+}
+
+.is-root-container > .wp-block-template-part:first-child {
+	grid-column: 1;
+	grid-row: 1;
+	background-color: var(--wp--preset--color--contrast);
+}
+
+.is-root-container > .wp-block-template-part:first-child ~ * {
+	grid-column: 2;
+	min-width: 0;
+}
+
+.is-root-container > .wp-block-template-part:last-child {
+	grid-column: 1 / -1;
+	margin-top: 0;
+}
+
+.is-root-container > .wp-block-template-part:last-child,
+.is-root-container > .wp-block-template-part:last-child > .wp-block-group {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.gt-vertical-header {
+	width: 96px;
+	min-height: 100vh;
+}
