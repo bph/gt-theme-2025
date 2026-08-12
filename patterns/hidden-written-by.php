@@ -17,8 +17,8 @@
 	<!-- /wp:paragraph -->
 	<!-- wp:post-author-name {"isLink":true} /-->
 	<!-- wp:paragraph -->
-	<p><?php esc_html_e( 'in', 'twentytwentyfive' ); ?></p>
+	<p>·</p>
 	<!-- /wp:paragraph -->
-	<!-- wp:post-terms {"term":"category","style":{"typography":{"fontWeight":"300"}}} /-->
+	<!-- wp:post-date /-->
 </div>
 <!-- /wp:group -->
