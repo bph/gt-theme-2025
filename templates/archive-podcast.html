@@ -1,7 +1,7 @@
-<!-- wp:template-part {"slug":"vertical-header"} /-->
+<!-- wp:template-part {"slug":"header"} /-->
 
 <!-- wp:group {"tagName":"main","align":"full","layout":{"type":"constrained"},"hideFromFeed":true} -->
-<main class="wp-block-group alignfull"><!-- wp:template-part {"slug":"site-identity"} /--><!-- wp:heading {"level":1,"align":"wide","style":{"typography":{"lineHeight":"1"},"spacing":{"padding":{"top":"var:preset|spacing|50"}}}} -->
+<main class="wp-block-group alignfull"><!-- wp:heading {"level":1,"align":"wide","style":{"typography":{"lineHeight":"1"},"spacing":{"padding":{"top":"var:preset|spacing|50"}}}} -->
 <h1 class="wp-block-heading alignwide" style="padding-top:var(--wp--preset--spacing--50);line-height:1">Podcast: Gutenberg Changelog</h1>
 <!-- /wp:heading -->
 
@@ -37,6 +37,10 @@
 <!-- wp:social-link {"url":"#","service":"feed","metadata":{"bindings":{"url":{"source":"gt-podcast-bb/episode-data","args":{"key":"subscribe_url"}}}}} /-->
 </ul>
 <!-- /wp:social-links -->
+
+<!-- wp:spacer {"height":"var:preset|spacing|50"} -->
+<div style="height:var(--wp--preset--spacing--50)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
 <!-- wp:query {"queryId":55,"query":{"perPage":12,"pages":0,"offset":"0","postType":"podcast","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"parents":[],"format":[]},"align":"wide","layout":{"type":"default"}} -->
 <div class="wp-block-query alignwide"><!-- wp:query-no-results -->
