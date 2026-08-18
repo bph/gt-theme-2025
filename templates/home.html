@@ -1,47 +1,56 @@
 <!-- wp:template-part {"slug":"header"} /-->
 
 <!-- wp:group {"tagName":"main","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"},"hideFromFeed":true} -->
-<main class="wp-block-group">
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"},"hideFromFeed":true} -->
-<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|30"}}}} -->
-<div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%","className":"is-style-default"} -->
-<div class="wp-block-column is-style-default" style="flex-basis:50%"><!-- wp:query {"queryId":58,"query":{"perPage":2,"pages":0,"offset":"1","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"exclude":{"category":[64]}},"parents":[]}} -->
-<div class="wp-block-query"><!-- wp:post-template -->
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"default"},"hideFromFeed":true} -->
-<div class="wp-block-group"><!-- wp:cover {"useFeaturedImage":true,"dimRatio":70,"overlayColor":"accent-3","isUserOverlayColor":true,"style":{"elements":{"heading":{"color":{"text":"var:preset|color|base"}}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-cover"><span aria-hidden="true" class="wp-block-cover__background has-accent-3-background-color has-background-dim-70 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:post-title {"isLink":true} /--></div></div>
-<!-- /wp:cover -->
+<main class="wp-block-group"><!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"},"hideFromFeed":true} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:heading -->
+<h2 class="wp-block-heading">🗞️ Latest Weekend Editions</h2>
+<!-- /wp:heading -->
 
-<!-- wp:post-excerpt {"moreText":"Read more -\u003e","fontSize":"medium"} /--></div>
-<!-- /wp:group -->
-<!-- /wp:post-template --></div>
-<!-- /wp:query -->
-
-<!-- wp:post-date /--></div>
-<!-- /wp:column -->
-
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%"><!-- wp:group {"style":{"layout":{"columnSpan":1,"rowSpan":1}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"},"hideFromFeed":true} -->
-<div class="wp-block-group"><!-- wp:query {"queryId":59,"query":{"perPage":3,"pages":0,"offset":"4","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[]}} -->
+<!-- wp:group {"style":{"layout":{"columnSpan":1,"rowSpan":1}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"},"hideFromFeed":true} -->
+<div class="wp-block-group"><!-- wp:query {"queryId":59,"query":{"perPage":3,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"include":{"category":[64]}},"parents":[],"excludeCurrent":null}} -->
 <div class="wp-block-query"><!-- wp:post-template -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"},"hideFromFeed":true} -->
 <div class="wp-block-group"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/2"} /-->
 
 <!-- wp:post-title {"isLink":true,"textColor":"contrast","fontSize":"large"} /-->
 
-<!-- wp:post-date /--></div>
+<!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /--></div>
 <!-- /wp:group -->
 <!-- /wp:post-template --></div>
 <!-- /wp:query --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"width":"25%"} -->
-<div class="wp-block-column" style="flex-basis:25%"><!-- wp:query {"queryId":52,"query":{"perPage":4,"pages":0,"offset":0,"postType":"podcast","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[]}} -->
-<div class="wp-block-query"><!-- wp:post-template {"fontSize":"medium"} -->
-<!-- wp:post-featured-image {"isLink":true} /-->
+<!-- wp:column {"width":"40%","className":"is-style-default"} -->
+<div class="wp-block-column is-style-default" style="flex-basis:40%"><!-- wp:heading -->
+<h2 class="wp-block-heading">📘 Articles and Tutorials</h2>
+<!-- /wp:heading -->
 
-<!-- wp:post-date /-->
+<!-- wp:query {"queryId":58,"query":{"perPage":3,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"exclude":{"category":[64]}},"parents":[],"excludeCurrent":null}} -->
+<div class="wp-block-query"><!-- wp:post-template -->
+<!-- wp:post-featured-image {"aspectRatio":"3/2"} /-->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+<!-- /wp:post-template --></div>
+<!-- /wp:query -->
+
+<!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /--></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"30%"} -->
+<div class="wp-block-column" style="flex-basis:30%"><!-- wp:heading -->
+<h2 class="wp-block-heading">🎙️Latest Podcast Episodes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:query {"queryId":52,"query":{"perPage":3,"pages":0,"offset":0,"postType":"podcast","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"parents":[],"format":[],"excludeCurrent":null}} -->
+<div class="wp-block-query"><!-- wp:post-template {"fontSize":"medium"} -->
+<!-- wp:image {"metadata":{"bindings":{"url":{"source":"gt-podcast-bb/episode-data","args":{"key":"cover_image"}}}}} -->
+<figure class="wp-block-image"><img alt="Episode Cover"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /-->
 
 <!-- wp:post-title {"isLink":true,"fontSize":"medium"} /-->
 <!-- /wp:post-template -->
@@ -56,15 +65,37 @@
 <!-- /wp:columns --></div>
 <!-- /wp:group -->
 
+<!-- wp:cover {"url":"https://gutenbergtimes.com/wp-content/uploads/2021/09/nick-nice-YpNf6ATniQA-unsplash-web.jpg","hasParallax":true,"dimRatio":10,"overlayColor":"contrast","isUserOverlayColor":true,"focalPoint":{"x":0.35,"y":0.35},"minHeight":400,"contentPosition":"center center","align":"full","anchor":"frontpagecover"} -->
+<div class="wp-block-cover alignfull has-parallax" style="min-height:400px" id="frontpagecover"><div class="wp-block-cover__image-background  has-parallax" style="background-position:35% 35%;background-image:url(https://gutenbergtimes.com/wp-content/uploads/2021/09/nick-nice-YpNf6ATniQA-unsplash-web.jpg)"></div><span aria-hidden="true" class="wp-block-cover__background has-contrast-background-color has-background-dim-10 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained"},"hideFromFeed":true} -->
+<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"large"} -->
+<h2 class="wp-block-heading has-text-align-center has-large-font-size">Need a zip from Gutenberg trunk branch? </h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"larger"} -->
+<h2 class="wp-block-heading has-text-align-center has-larger-font-size"><strong><a href="https://gutenbergtimes.com/need-a-zip-from-master/">Get the Gutenberg Nightly </a></strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"accent-3","className":"is-style-fill","style":{"typography":{"textAlign":"center"}}} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-accent-3-background-color has-background has-text-align-center wp-element-button" href="https://gutenbergtimes.com/need-a-zip-from-master/#nightly">Download the latest version</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}}} -->
+<p class="has-text-align-center"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fbph%2Fdistribute-nightly%2Fmain%2Fbadge%2Fdownloads.json&amp;style=for-the-badge" alt="GitHub all releases"></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:cover -->
+
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"},"hideFromFeed":true} -->
-<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:query {"queryId":62,"query":{"perPage":6,"pages":0,"offset":"9","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[]},"align":"wide"} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:query {"queryId":62,"query":{"perPage":9,"pages":0,"offset":"5","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":null,"parents":[],"excludeCurrent":null},"align":"wide"} -->
 <div class="wp-block-query alignwide"><!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}},"layout":{"type":"grid","columnCount":3,"minimumColumnWidth":null}} -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"},"hideFromFeed":true} -->
 <div class="wp-block-group"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"4/3"} /-->
 
 <!-- wp:post-title {"isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"textColor":"contrast","fontSize":"large"} /-->
 
-<!-- wp:post-date /--></div>
+<!-- wp:post-date {"metadata":{"bindings":{"datetime":{"source":"core/post-data","args":{"field":"date"}}}}} /--></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->
 
@@ -78,9 +109,7 @@
 <!-- /wp:query-pagination --></div>
 <!-- /wp:group --></div>
 <!-- /wp:query --></div>
-<!-- /wp:group -->
-
-</main>
+<!-- /wp:group --></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer"} /-->

@@ -1,0 +1,18 @@
+<?php
+/**
+ * Title: S/H TOC
+ * Slug: gt-2025/sh-toc
+ * Categories: 
+ */
+?>
+<!-- wp:newsletterglue/showhide {"show_in_email":false} -->
+<div width="100%" class="wp-block-newsletterglue-showhide ng-block"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"0","margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"},"hideFromFeed":true} -->
+<div class="wp-block-group has-accent-5-background-color has-background" style="margin-top:var(--wp--preset--spacing--20);margin-bottom:var(--wp--preset--spacing--20);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:paragraph -->
+<p><strong>Table of Contents</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table-of-contents {"headings":[{"content":"Developing Gutenberg and WordPress","level":2,"link":"https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#0-word-press-release-information"},{"content":"Plugins and Tools for #nocode site builders","level":2,"link":"https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#0-p"},{"content":"Building Blocks and Tools ","level":2,"link":"https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#3-building-themes-for-fse-and-word-press"},{"content":"What's new in Playground? ","level":2,"link":"https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#what-s-new-in-playground"},{"content":"AI in WordPress ","level":2,"link":"https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#ai-in-wordpress"}],"ordered":false} -->
+<nav class="wp-block-table-of-contents"><ul><li><a class="wp-block-table-of-contents__entry" href="https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#0-word-press-release-information">Developing Gutenberg and WordPress</a></li><li><a class="wp-block-table-of-contents__entry" href="https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#0-p">Plugins and Tools for #nocode site builders</a></li><li><a class="wp-block-table-of-contents__entry" href="https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#3-building-themes-for-fse-and-word-press">Building Blocks and Tools </a></li><li><a class="wp-block-table-of-contents__entry" href="https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#what-s-new-in-playground">What's new in Playground? </a></li><li><a class="wp-block-table-of-contents__entry" href="https://gutenbergtimes.com/wordpress-7-1-rc-7-0-3-security-release-block-runner-new-playground-ui-and-more-weekend-edition-372/#ai-in-wordpress">AI in WordPress </a></li></ul></nav>
+<!-- /wp:table-of-contents --></div>
+<!-- /wp:group --></div>
+<!-- /wp:newsletterglue/showhide -->
