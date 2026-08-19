@@ -1,0 +1,46 @@
+name: Deploy theme to Pressable
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-pressable
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout tag
+        uses: actions/checkout@v4
+
+      - name: Load SSH key
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.PRESSABLE_SSH_KEY }}
+
+      - name: Trust Pressable host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 22 sftp.pressable.com >> ~/.ssh/known_hosts
+
+      - name: Sync theme files
+        run: |
+          rsync -avz --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='node_modules/' \
+            --exclude='*.zip' \
+            --exclude='.DS_Store' \
+            --exclude='readme.md' \
+            ./ ${{ secrets.PRESSABLE_SFTP_USER }}@sftp.pressable.com:/srv/htdocs/wp-content/themes/gt-theme-2025/
+
+      - name: Activate theme via WP-CLI
+        run: |
+          ssh ${{ secrets.PRESSABLE_SFTP_USER }}@sftp.pressable.com \
+            "wp --path=/srv/htdocs theme activate gt-theme-2025"
