@@ -7,9 +7,33 @@ Description: Theme for Gutenberg Times based on Twenty-Twenty-Five
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 5.7
-Version: 0.2.2
+Version: 0.2.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gt-2025
 Tags:
 */
+
+/* Subscribe button in the header: keep the label on one line. */
+.gbt-subscribe .wp-block-button__link {
+	white-space: nowrap;
+}
+
+/* Narrow viewports: tighten the Subscribe button so it still fits. */
+@media (max-width: 480px) {
+	.gbt-subscribe .wp-block-button__link {
+		padding-inline: 10px;
+		letter-spacing: 0.02em;
+	}
+}
+
+/* Navigation overlay close button: WP core defaults padding to 0 (fine for
+   the SVG icon, but the "Close" text label ends up flush against the border).
+   Restore breathing room and center the label. */
+.wp-block-navigation__responsive-container-close {
+	padding: 6px 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
