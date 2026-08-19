@@ -19,20 +19,25 @@ jobs:
       - name: Checkout tag
         uses: actions/checkout@v4
 
-      - name: Sync theme files via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: sftp.pressable.com
-          protocol: sftp
-          port: 22
-          username: ${{ secrets.PRESSABLE_SFTP_USER }}
-          password: ${{ secrets.PRESSABLE_SFTP_PASSWORD }}
-          server-dir: /srv/htdocs/wp-content/themes/gt-theme-2025/
-          local-dir: ./
-          exclude: |
-            **/.git/**
-            **/.github/**
-            **/node_modules/**
-            **/*.zip
-            **/.DS_Store
-            readme.md
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy theme via SFTP
+        env:
+          SFTP_USER: ${{ secrets.PRESSABLE_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.PRESSABLE_SFTP_PASSWORD }}
+        run: |
+          lftp -u "$SFTP_USER,$SFTP_PASS" sftp://sftp.pressable.com <<'EOF'
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          set net:timeout 20
+          mirror --reverse --delete --verbose \
+            --exclude-glob '.git/' \
+            --exclude-glob '.github/' \
+            --exclude-glob 'node_modules/' \
+            --exclude-glob '*.zip' \
+            --exclude-glob '.DS_Store' \
+            --exclude-glob 'readme.md' \
+            ./ /srv/htdocs/wp-content/themes/gt-theme-2025/
+          bye
+          EOF
