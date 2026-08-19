@@ -7,7 +7,7 @@ Description: Theme for Gutenberg Times based on Twenty-Twenty-Five
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 5.7
-Version: 0.2.3
+Version: 0.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gt-2025
@@ -27,11 +27,14 @@ Tags:
 	}
 }
 
-/* Navigation overlay close button: WP core defaults padding to 0 (fine for
-   the SVG icon, but the "Close" text label ends up flush against the border).
-   Restore breathing room and center the label. */
-.wp-block-navigation__responsive-container-close {
-	padding: 6px 12px;
+/* Navigation overlay close button: WP generates a fixed 44x44 box (sized
+   for the SVG icon). With a text "Close" label the fixed square looks
+   offset. Match the WP selector specificity, size the box to the text,
+   and add padding + centering. */
+.wp-block-navigation.gbt-drawer-nav .wp-block-navigation__responsive-container-close {
+	width: auto;
+	height: auto;
+	padding: 6px 14px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
